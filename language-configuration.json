@@ -1,0 +1,13 @@
+{
+  "comments": {
+    "blockComment": ["<% /*", "*/ %>"]
+  },
+  "brackets": [["<%", "%>"]],
+  "autoClosingPairs": [["<%", "%>"]],
+  "surroundingPairs": [
+    ["<", ">"],
+    ["(", ")"],
+    ["{", "}"],
+    ["[", "]"]
+  ]
+}
