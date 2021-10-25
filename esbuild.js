@@ -5,7 +5,7 @@ const fs = require('fs');
 
 const pkg = require('./package.json');
 
-const jointDependencies = Object.keys(pkg.dependencies).join('$|^');
+const jointDependencies = Object.keys(pkg.dependencies || {}).join('$|^');
 const dependencyRegex = new RegExp(`^vscode$|^${jointDependencies}$`);
 
 const setExternals = {
