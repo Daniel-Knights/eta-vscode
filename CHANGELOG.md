@@ -4,6 +4,6 @@ All notable changes to the "eta-vscode" extension will be documented in this fil
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
-## [Unreleased]
+## 0.0.1 [25/10/2021]
 
 - Initial release
