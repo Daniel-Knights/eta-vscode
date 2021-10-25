@@ -1,0 +1,14 @@
+**/*.map
+**/*.ts
+.vscode/**
+images/**/*.gif
+src/**
+typings/**
+test/**
+.editorconfig
+.gitignore
+ISSUE_TEMPLATE.md
+tsconfig.json
+.eslintrc
+.eslintignore
+esbuild.js

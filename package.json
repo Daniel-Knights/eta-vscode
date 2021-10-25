@@ -1,0 +1,76 @@
+{
+  "name": "eta-vscode",
+  "displayName": "Eta VSCode",
+  "description": "Eta language support",
+  "version": "0.0.1",
+  "license": "MIT",
+  "publisher": "DanielKnights",
+  "icon": "assets/logo.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Daniel-Knights/eta-vscode"
+  },
+  "engines": {
+    "vscode": "^1.46.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Other"
+  ],
+  "keywords": [
+    "vscode",
+    "eta",
+    "syntax",
+    "syntax-highlighting"
+  ],
+  "activationEvents": [
+    "onLanguage:eta"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "eta",
+        "extensions": [
+          ".eta"
+        ],
+        "aliases": [
+          "Eta",
+          "eta"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "eta",
+        "scopeName": "source.eta",
+        "path": "./syntaxes/eta.json",
+        "injectTo": [
+          "text.html"
+        ]
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run build",
+    "build": "node esbuild.js",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "npx eslint . --ext .js,.ts",
+    "checks": "npm run lint && npm run compile",
+    "pub": "npm run checks && vsce publish patch",
+    "pub-minor": "npm run checks && vsce publish minor",
+    "pub-major": "npm run checks && vsce publish major"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.4",
+    "@types/vscode": "^1.61.0",
+    "@typescript-eslint/eslint-plugin": "^5.1.0",
+    "@typescript-eslint/parser": "^5.1.0",
+    "esbuild": "^0.13.9",
+    "eslint": "^8.1.0",
+    "prettier": "^2.4.1",
+    "typescript": "^4.4.4"
+  }
+}

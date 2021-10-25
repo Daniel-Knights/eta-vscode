@@ -1,0 +1,38 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Eta",
+  "scopeName": "source.eta",
+  "injectionSelector": "L:text.html",
+  "patterns": [
+    {
+      "include": "#keywords"
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control",
+          "begin": "<%[-_]?\\s*?(~|=)?",
+          "begin-captures": {
+            "0": {
+              "name": "keyword.control.open.eta"
+            }
+          },
+          "end": "[-_]?%>",
+          "end-captures": {
+            "0": {
+              "name": "keyword.control.close.eta"
+            }
+          },
+          "contentName": "meta.embedded.block.javascript",
+          "patterns": [
+            {
+              "include": "source.js"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
