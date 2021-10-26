@@ -48,7 +48,10 @@
         "path": "./syntaxes/eta.json",
         "injectTo": [
           "text.html"
-        ]
+        ],
+        "embeddedLanguages": {
+          "source.js": "javascript"
+        }
       }
     ]
   },
