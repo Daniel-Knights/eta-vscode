@@ -2,7 +2,7 @@
   "name": "eta-vscode",
   "displayName": "Eta VSCode",
   "description": "Eta language support",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "publisher": "DanielKnights",
   "icon": "assets/logo.png",
